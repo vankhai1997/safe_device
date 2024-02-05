@@ -31,7 +31,6 @@ class _HomeState extends State<Home> {
     // Platform messages may fail, so we use a try/catch PlatformException.ßß
     try {
       isJailBroken = await SafeDevice.isJailBroken;
-      canMockLocation = await SafeDevice.canMockLocation;
       isRealDevice = await SafeDevice.isRealDevice;
       isOnExternalStorage = await SafeDevice.isOnExternalStorage;
       isSafeDevice = await SafeDevice.isSafeDevice;

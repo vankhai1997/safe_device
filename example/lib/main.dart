@@ -28,7 +28,6 @@ class _MyAppState extends State<MyApp> {
     if (!mounted) return;
     try {
       isJailBroken = await SafeDevice.isJailBroken;
-      canMockLocation = await SafeDevice.canMockLocation;
       isRealDevice = await SafeDevice.isRealDevice;
       isOnExternalStorage = await SafeDevice.isOnExternalStorage;
       isSafeDevice = await SafeDevice.isSafeDevice;
