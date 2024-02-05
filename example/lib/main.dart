@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:permission_handler/permission_handler.dart';
 import 'package:safe_device/safe_device.dart';
 
 void main() => runApp(MyApp());
@@ -24,10 +23,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   Future<void> initPlatformState() async {
-    await Permission.location.request();
-    if (await Permission.location.isPermanentlyDenied) {
-      openAppSettings();
-    }
+
 
     if (!mounted) return;
     try {
